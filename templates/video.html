@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emotion Detection || Video</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<header>
+    <nav class="navbar">      
+        <ul class="nav-links">
+            <li><a href="/" >Home</a></li>
+            <li><a href="video" >Video</a></li>
+            <li><a href="audio" >Audio</a></li>
+            <li><a href="text" >Text</a></li>
+            <li><a href="about">About Us</a></li>
+        </ul>
+    </nav>
+</header>
+<h1 class="title">Facial Emotion Recognition</h1>
+<div class='content-container'>
+    <div class="info-content">
+        <h4>
+           Welcome to our Emotion Detection System. Follow the instructions to evaluate your emotions.</h4><hr style="height:1px;background-color:#be6483">
+            <ul>
+                <li>Click on the Start Camera</li><hr style="height:5px;border-width:0;color:gray;background-color:lightgreen">
+                <li>Keep your face towards camera</li><hr style="height:5px;border-width:0;color:gray;background-color:cyan">
+                <li>Hit "Detect Emotion" to get your emotion detection result.</li><hr style="height:5px;border-width:0;color:gray;background-color:violet">
+                <li>Thank You!!</li><hr style="height:5px;border-width:0;color:gray;background-color:magenta">
+            </ul>
+        </h4>
+    </div>
+    
+    <div class="container">
+        
+        <div class="video-container" id="video-container">
+            <img id="video-feed" src="" alt="Click Start to Open Camera">
+            <div class="loading-container">
+                <div class="loading-spinner"></div>
+            </div>
+        </div>
+        <div class="button-container">
+            <button id="start-button" class="start-button">Start Camera</button>
+            <button id="stop-button" class="stop-button">Detect Emotion</button>
+        </div>
+    </div>
+    <div id="result-container" class="result-container">
+        <p id="result" class="result-text"> </p>
+    </div>
+</div>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+<br>
+<footer style="position: fixed; bottom: 5px;">
+    &copy; 2024 - Emotion Detection System</footer>
+</body>
+</html>
+
+

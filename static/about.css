@@ -1,0 +1,342 @@
+@import 
+url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap");
+
+/* GEneral stuff */
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+}
+html{
+    line-height: 1.15;
+}
+body {  
+    background-size: 400% 400%;
+    background: rgb(158,208,119);
+    background: linear-gradient(90deg, rgba(158,208,119,1) 0%, rgba(157,171,173,1) 36%, rgba(191,97,129,1) 100%);
+    font-family: 'Poppins', sans-serif;
+    }
+    
+    @keyframes gradient {
+      0% {
+          background-position: 0% 50%;
+      }
+      50% {
+          background-position: 100% 50%;
+      }
+      100% {
+          background-position: 0% 50%;
+      }
+    }
+    
+
+a{
+    color: #333333;
+    font-weight: 400;
+    outline: none;
+    text-decoration: none;
+    transition: 0.5s;
+}
+a:hover,
+a:focus{
+    outline: none;
+    text-decoration: none;
+}
+p{
+    padding: 0;
+    margin: 0 0 15px 0;
+    color: #454545;
+    font-weight: 300;
+}
+
+img{
+    width: 100%;
+    height: auto;
+}
+.container{
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.section-title{
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin-bottom: 80px;
+    margin-top: 40px;
+    text-align: center;
+}
+.section-title h1{
+    display: inline-block;
+    font-size: 35px;
+    text-transform: uppercase;
+    font-weight: 700;
+    color: #000000;
+    margin: 0 0 5px;
+    position: relative;
+}
+.section-title h1::before{
+    content: '';
+    left: 0;
+    position: absolute;
+    height: 3px;
+    right: 32%;
+    background-color: #50c5fc;
+    bottom: -5px;
+
+}
+.container .section-title h1::before{
+    left: 30%;
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -10px;
+    margin-bottom: -11px;
+}
+.column{
+    position: relative;
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+.team{
+    margin-bottom:30px ;
+ 
+}
+.team .team-img{
+    position: relative;
+    font-size: 0;
+    text-align: center;
+    z-index: 99;
+}
+
+.team-img > img:hover{
+    box-shadow:#0495e9 0 0 18px !important;
+    transform: scale(1.1);
+    transition: 1s ease-in-out;
+}
+
+.team .team-img img{
+    width: 200px;
+    height: auto;
+    border-radius: 100%;
+    border: 20px solid #f3f4fa;
+}
+
+.team .team-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 80px;
+    transform: translateY(-30%);
+    z-index: 1;
+    text-align: center;
+    background: #f3f4fa;
+    border-radius: 10px;
+}
+.team .team-content h2{
+    font-size: 23px;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+.team .team-content h3{
+    font-size: 16px;
+    font-weight: 300;
+}
+.team .team-content h4{
+    font-size: 14px;
+    font-weight: 300;
+    letter-spacing: 1px;
+    font-style: italic;
+    margin-bottom: 0;
+}
+.team .team-content p{
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+}
+
+.member {
+    display: flex;
+    flex-direction: column;
+    gap:2px;
+    margin: 0;
+}
+
+
+/* Mobile Responsive */
+
+@media (min-width: 576px){
+    .container{
+        max-width: 600px;
+    }
+    .column{
+        max-width: 50%; 
+    }
+}
+@media (min-width: 768px){
+    .container{
+        max-width: 680px;
+    }
+    .column{
+        max-width: 50%;
+    }
+}
+@media (min-width: 992px){
+    .container{
+        max-width: 700px;
+    }
+    .column{
+        max-width: 50%;
+    }
+}
+@media (min-width: 1200px){
+    .container{
+        max-width: 1250px;
+    }
+    .column{
+        max-width: 25%;
+    }
+   
+}
+
+ul {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    transform: scale(0.4);
+    justify-content: center;
+    flex-direction: row;
+  }
+  ul li {
+    list-style:none;
+  }
+  ul li a {
+    display:block;
+    position:relative;
+    width:100px;
+    height:100px;
+    line-height:100px;
+    font-size:40px;
+    text-align:center;
+    text-decoration:none;
+    color:#404040;
+    margin: 0 30px;
+    transition:.5s;
+  }
+  ul li a span {
+    position:absolute;
+    transition: transform .5s;
+  }
+  ul li a span:nth-child(1),
+  ul li a span:nth-child(3){
+    width:100%;
+    height:3px;
+    background:#404040;
+  }
+  ul li a span:nth-child(1) {
+    top:0;
+    left:0;
+    transform-origin: right;
+  }
+  ul li a:hover span:nth-child(1) {
+    transform: scaleX(0);
+    transform-origin: left;
+    transition:transform .5s;
+  }
+  
+  ul li a span:nth-child(3) {
+    bottom:0;
+    left:0;
+    transform-origin: left;
+  }
+  ul li a:hover span:nth-child(3) {
+    transform: scaleX(0);
+    transform-origin: right;
+    transition:transform .5s;
+  }
+  
+  ul li a span:nth-child(2),
+  ul li a span:nth-child(4){
+    width:3px;
+    height:100%;
+    background:#404040;
+  }
+  ul li a span:nth-child(2) {
+    top:0;
+    left:0;
+    transform:scale(0);
+    transform-origin: bottom;
+  }
+  ul li a:hover span:nth-child(2) {
+    transform: scale(1);
+    transform-origin: top;
+    transition:transform .5s;
+  }
+  ul li a span:nth-child(4) {
+    top:0;
+    right:0;
+    transform:scale(0);
+    transform-origin: top;
+  }
+  ul li a:hover span:nth-child(4) {
+    transform: scale(1);
+    transform-origin: bottom;
+    transition:transform .5s;
+  }
+  
+  .facebook:hover {
+    color: #3b5998;
+  }
+  .facebook:hover span { 
+    background: #3b5998;
+  }
+  .twitter:hover {
+    color: #1da1f2;
+  }
+  .twitter:hover span { 
+    background: #1da1f2;
+  }
+  .instagram:hover {
+    color: #c32aa3;
+  }
+  .instagram:hover span { 
+    background: #c32aa3;
+  }
+  .google:hover {
+    color: #dd4b39;
+  }
+  .google:hover span { 
+    background: #dd4b39;
+  }
+  ul li a .twitter {
+    color: #1da1f2;
+  }
+  ul li a:hover:nth-child(3) {
+    color: #c32aa3;
+  }
+  ul li a:hover:nth-child(4) {
+    color: #dd4b39;
+  }
+
+.exit {
+    display: block;
+    width:6%;
+    height:auto;
+    text-align:center;
+    margin:auto;
+    padding:10px;
+    transition: .3s, -webkit-mask-position .3s .3s;
+}
+
+
+.exit:hover{
+    transform: rotateZ(180deg);
+    transition: 1s;
+}

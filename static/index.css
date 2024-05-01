@@ -1,0 +1,130 @@
+body {
+	text-align: center;
+  margin: 0;
+  padding: 0;
+}
+* {
+  margin: 0;
+  padding: 0;
+} 
+
+.heads{
+  height: 150px;
+  object-fit: cover;
+  image-rendering:optimizeQuality;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+ul {
+  padding: 20px; 
+  /*list-style-position: inside;*/
+  /*list-style-type: none;*/
+}
+
+
+.familia{
+  margin: 0;
+}
+
+#left-col {
+  align-content:center;
+  text-align: center;
+}
+.column_home {
+  align-content:center;
+  float: left;
+  width: 33%;
+  height: 100%;
+}
+
+.column_home img:hover{
+  transform: scale(0.9);
+  transition: 1s;
+}
+
+
+* {
+  box-sizing: border-box;
+}
+
+/*BUTTONS*/
+
+input:hover{
+  border-color: #a0a0a0 #b9b9b9 #b9b9b9 #b9b9b9;
+}
+input:focus{
+  border-color:#4d90fe;
+}
+
+.th-buttons {
+  border-radius: 10px;
+  background: #45AF7F;
+  border: 1px solid #f2f2f2;
+  color: #ffffff;
+  cursor: default;
+  font-size: 14px;
+  font-weight: bold;
+  width: 200px;
+  padding: 0 16px;
+  height:50px;
+}
+
+.th-buttons:hover {
+  box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+  background: #f8f8f8;
+  border: 1px solid #c6c6c6;
+  box-shadow: 0 1px 1px rgba(0,0,0,0.1);
+  color: #222;
+  transition: 1s;
+}
+
+.th-buttons:hover {
+  color:#45AF7F;
+}
+
+
+.fancy {
+  text-decoration: underline;
+  
+}
+
+/* ABOUT US BUTTON ON INDEX*/
+
+.button-91 {
+  color: #fff;
+  padding: 15px 25px;
+  background-color: #45AF7F;
+  background-image: radial-gradient(93% 87% at 87% 89%, rgba(0, 0, 0, 0.23) 0%, transparent 86.18%), radial-gradient(66% 66% at 26% 20%, rgba(255, 255, 255, 0.55) 0%, rgba(255, 255, 255, 0) 69.79%, rgba(255, 255, 255, 0) 100%);
+  box-shadow: inset -3px -3px 9px rgba(255, 255, 255, 0.25), inset 0px 3px 9px rgba(255, 255, 255, 0.3), inset 0px 1px 1px rgba(255, 255, 255, 0.6), inset 0px -8px 36px rgba(0, 0, 0, 0.3), inset 0px 1px 5px rgba(255, 255, 255, 0.6), 2px 19px 31px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 10px;
+
+  border: 0;
+
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+
+  cursor: pointer;
+}
+
+.button-91:hover{
+  color:#fff;
+  transform: scale(0.9);
+  transition: 1s;
+}
+
+
+.heads:hover {
+  filter:hue-rotate(90deg) saturate(2) contrast(1) brightness(1);
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,.2),0 6 px 20px 0 rgba(0,0,0,.19);
+  z-index: 1;
+  transition: 2s linear;
+}

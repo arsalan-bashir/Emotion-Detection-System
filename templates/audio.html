@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emotion Detection || Speech</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <nav class="navbar">      
+            <ul class="nav-links">
+                <li><a href="/" >Home</a></li>
+                <li><a href="video" >Video</a></li>
+                <li><a href="audio" >Audio</a></li>
+                <li><a href="text" >Text</a></li>
+                <li><a href="about">About Us</a></li>
+            </ul>
+        </nav>
+    </header>
+    <h1 class="title">Speech Emotion Detection</h1>
+    <div class="audio-container">
+        <div class="audio-info-content">
+            <h4>
+            Welcome to our Speech Emotion Detection System. Follow the instructions to evaluate your emotions.</h4><hr style="height:1px;background-color:#be6483">
+                <ul>
+                    <li>Click on the Microphone to Start Recoring</li><hr style="height:5px;border-width:0;color:gray;background-color:lightgreen">
+                    <li>You can choose to upload an audio file instead</li><hr style="height:5px;border-width:0;color:gray;background-color:cyan">
+                    <li>Check your audio via audio player. (Appears after audio)</li><hr style="height:5px;border-width:0;color:gray;background-color:yellow">
+                    <li>Hit "Detect Emotion" to get your emotion detection result.</li><hr style="height:5px;border-width:0;color:gray;background-color:violet">
+                    <li>Thank You!!</li><hr style="height:5px;border-width:0;color:gray;background-color:magenta">
+                </ul>
+            </h4>
+        </div>
+        <div class="audio-content">
+            <button id="start-button" class="audio-start"><img id="mic" src="/static/imgs/mikey.png"/></button>
+                <h2>OR</h2>
+                <input type="file" id="audio-upload" accept="audio/*">
+                <div id="audio-container" class="audio-player">
+                    <h4>Audio Player</h4>
+                    <audio controls id="audio-player"></audio>
+                </div>
+                <div class="button-container">
+                    <button id="submit-button" class="audio-submit">Detect Emotion</button>
+                    <button id="reset-button" class="audio-reset">Reset</button>
+                </div>
+        </div>
+        <div id="result-container">
+            <h2>Result</h2>
+            <p id="result"></p>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='audio.js') }}"></script>
+    <footer style="position: fixed; bottom: 5px;">
+        &copy; 2024 - Emotion Detection System</footer>
+</body>
+</html>
