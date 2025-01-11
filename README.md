@@ -6,9 +6,9 @@
 
 <h2>🧐 Features</h2>
 Here're some of the project's best features:
-*   Live Video Emotion Detection
-*   Vocal Sentiment Analysis
-*   Textual Emotion Detection
+* Live Video Emotion Detection
+* Vocal Sentiment Analysis
+* Textual Emotion Detection
 
 <h2>🛠️Steps to Run the System:</h2>
 <p>1. Clone the Repository</p>
