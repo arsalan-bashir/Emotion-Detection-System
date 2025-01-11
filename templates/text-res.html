@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Emotion Detection || Text</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <header>
+    <nav class="navbar">      
+        <ul class="nav-links">
+            <li><a href="/" >Home</a></li>
+            <li><a href="video" >Video</a></li>
+            <li><a href="audio" >Audio</a></li>
+            <li><a href="text" >Text</a></li>
+            <li><a href="about">About Us</a></li>
+        </ul>
+    </nav>
+</header>
+<h1 class="title">Textual Emotion Recognition</h1>
+<div class="top-container">
+  <div class="form-container">
+    <form action="/predict_text" method="post" id="text-form">
+        <textarea cols="70" rows ="10" name="text" placeholder="Describe a situation to evaluate the emotions"></textarea><br><br>
+      </form>
+      <button type="submit" class="comic-button" id="text-sub" form="text-form">Detect Emotion </button>
+  </div>
+  <div class="res-container" align="center";>
+      <table class='res'>
+        <tr class='row-1'>
+          <th>Emotion</th>
+          <td>{{traits}}</td>
+        </tr>
+        <tr>
+          <th>Number of tokens:</th>
+          <td>{{num_words}}</td>
+        </tr>
+        <tr>
+          <th>Top 5 Tokens:</td>
+              <td class="big-row">
+            <ul>
+            {% for el in common_words %}
+               <li>{{el}}</li>
+             {% endfor %}
+         </ul> </td>
+        </tr>          
+      </table>  
+    </div>
+  </div>
+  <footer style="position: fixed; bottom: 5px;">
+    &copy; 2024 - Emotion Detection System</footer>
+<script src="{{ url_for('static', filename='text.js') }}"></script>
+</body>
+</html>

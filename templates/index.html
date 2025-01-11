@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
+    <script src="https://kit.fontawesome.com/f1e37334f6.js" crossorigin="anonymous"></script>
+    <title>Emotion Detection System ||| Home</title>
+
+  </head>
+ <body>
+    <img class="heads" src ="/static/imgs/heading.svg" width="100%">
+
+    <!-- FACIAL EMOTION RECOGNITION -->
+  <div class="row">
+    <div class="column_home" align="center">
+      <img src = "/static/imgs/facial.png" width="100%">
+      <div style="width:70%; text-align:justify; align-content:center; display:inline-block;">
+        <p class="familia"> Use the facial emotion recognition and get a feedback on how our algorithm interprets your facial emotions .</p>
+        <br>
+        <p class="familia"> You will be provided a feedback on your facial emotions such as :
+        <ul>
+          <li>Anger</li>
+          <li>Disgust</li>
+          <li>Fear</li>
+          <li>Happiness</li>
+          <li>Sadness</li>
+          <li>Surprise</li>
+          <li>Neutral</li>
+        </ul>
+        <br>
+        <br>
+      </div>
+    </div>
+
+ <!-- AUDIO EMOTION RECOGNITION -->
+
+      <div class="column_home" align="center">
+        <img src= "/static/imgs/speech.png" width="100%">
+        <div style="width:70%; text-align:justify; align-content:center; display:inline-block;">
+          <p class="familia"> Use the speech emotion recognition and get a feedback on how our algorithm interprets your vocal emotions.</p>
+          <br>
+          <p class="familia" > You will be provided a feedback on your vocal emotions such as :
+          <ul>
+            <li>Neutral</li>
+            <li>Calm</li>
+            <li>Happiness</li>
+            <li>Sadness</li>
+            <li>Anger</li>
+            <li>Fear</li>
+            <li>Disgust</li>
+            <li>Surprise</li>
+          </ul>
+          <br>
+          <br>
+        </div>
+      </div>
+
+     
+ 
+<!-- TEXT EMOTION RECOGNITION -->
+      <div class="column_home" align="center">
+        <img src = "/static/imgs/keyboard.png" width="100%">
+        <div style="width:70%; text-align:justify; align-content:center; display:inline-block;">
+          <p class="familia"> Use the text based emotion recognition and get a feedback on how our algorithm 
+            interprets your psychological traits</p>
+          <br>
+          <p class="familia"> You will be provided a feedback on your 11 Psychological traits, which include :
+          <ul>
+            <li>Hate</li>
+            <li>Neutral</li>
+            <li>Anger</li>
+            <li>Love</li>
+            <li>Worry</li>
+            <li>Relief</li>
+            <li>Happiness</li>
+            <li>Fear</li>
+            <li>Sadness</li>
+            <li>Disgust</li>
+          </ul>
+          <br>
+          <br>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+
+<!--Video index button-->
+       <div class="column_home" align="center">
+           <form action="/video" method="get" align="center" id="vid">
+           <button type="submit" name="video" form="vid" align="center" class="th-buttons"><i class="fa-solid fa-video fa-2xl"></i></button>
+         </form>
+       </div>
+
+<!--Audio index button-->
+     <div class="column_home" align="center">
+      <form action="/audio" method="get" align="center" id="aud">
+      <button type="submit" name="audio"  align="center" form="aud" class="th-buttons"><i class="fa-solid fa-microphone fa-2xl"></i></button>
+    </form>
+  </div>
+
+<!--Text index  button-->
+ <div class="column_home" align="center">
+     <form action="/text" method="get" align="center" id="txt">
+       <button type="submit" name="text"  align="center" form="txt" class="th-buttons"><i class="fa-solid fa-keyboard fa-2xl"></i></button>
+     </form>
+ </div>
+</div>
+
+    <br><br>
+    <a href="about">
+    <button class="button-91" role="button">About Us</button>
+    </a>
+    <footer style="position: fixed; bottom: 5px;">
+      &copy; 2024 - Emotion Detection System</footer>
+ </body>
+ </html>
